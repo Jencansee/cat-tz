@@ -1,12 +1,19 @@
+.section-rooms__cards{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
 .section-rooms__card{
     border: 1px solid $gray;
     border-radius: 0.6rem;
-    margin:0 2rem;
+    margin-top: 2rem;
 }
 .section-rooms__card-text-wrap{
     padding: 1.5rem 0rem 2rem 2rem;
 }
-.section-rooms__card-text-wrap > p {
+.section-rooms__card-text-wrap > p, .section-rooms__inventory-icon-wrap p {
     margin-top: 1rem;
 }
 .section-rooms__card-heading{
@@ -33,4 +40,37 @@
         height: 3.4rem;
         transform: translateY(-50%);
     }
+    &:active{
+        background-color: #F05B1B;
+    }
+}
+.section-rooms__inventory-icon-wrap{
+    position: relative;
+}
+.section-rooms__icon{
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    right: 38%;
+}
+.section-rooms__icon--empty{
+    background: url(../../src/img/svg/inventory-icons/empty.svg) no-repeat;
+}
+.section-rooms__icon--catbed{
+    background: url(../../src/img/svg/inventory-icons/catbed.svg) no-repeat;
+    top: 0.2rem;
+    height: 1.2rem;
+}
+.section-rooms__icon--scratcher{
+    background: url(../../src/img/svg/inventory-icons/scratcher.svg) no-repeat;
+    right: 30%;
+    width: 1.4rem;
+}
+.section-rooms__icon--cat-tree{
+    background: url(../../src/img/svg/inventory-icons/cat-tree.svg) no-repeat;
+    right: 22%;
+}
+.section-rooms__icon--house{
+    background: url(../../src/img/svg/inventory-icons/house.svg) no-repeat;
+    right: 14%;
 }

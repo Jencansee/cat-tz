@@ -9,7 +9,7 @@
     <title>Котейка</title>
 </head>
 <body>
-    <header class="page-header">
+    <header class="page-header" id="page-header">
         <a class="page-header__logo" href="">
             <img class="page-header__logo-image" src="./src/img/svg/page-header__logo-image.svg" alt="Котейка">
         </a>
@@ -29,16 +29,16 @@
             <div class="section-rooms__head-wrap">
             <h1 class="section-rooms__head">Наши номера</h1>
             <select class="section-rooms__sorting" id="section-rooms_sort">
-                <option value="area-up" selected>По площади</option>
-                <option value="area-down">По площади</option>
-                <option value="price-up">По цене</option>
-                <option value="price-down">По цене</option>
+                <option value="area-up" selected> 🠕 По площади</option>
+                <option value="area-down"> 🠗 По площади</option>
+                <option value="price-up"> 🠕 По цене</option>
+                <option value="price-down"> 🠗 По цене</option>
               </select>
             </div>
             <div class="section-rooms__wrapper">
                 <div class="section-rooms__filters">
+                    <p class="section-rooms__price-text">Цена за сутки, ₽</p>
                     <label class="section-rooms__price-range"> 
-                        <p class="section-rooms__price-text">Цена за сутки, ₽</p>
                         <input class="section-rooms__price-input" size="10" type="text" placeholder="от 100">
                         <input class="section-rooms__price-input" size="10" type="text" placeholder="до 600">
                     </label>
@@ -110,9 +110,9 @@
                             <h3 class="section-rooms__card-heading">Эконом</h3>
                             <p>Размеры (ШхГхВ) - 90х70х180 см</p>
                             <p>Площадь - 0,63 м2</p>
-                            
-                            <p>Оснащение номера</p>
-
+                            <div class="section-rooms__inventory-icon-wrap">
+                                <p>Оснащение номера <span class="section-rooms__icon section-rooms__icon--empty"></span></p>
+                            </div>
                             <p>Цена за сутки: <span class="section-rooms_price-tag">100₽</span></p>
                             <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
                         </div>
@@ -124,9 +124,11 @@
                             <h3 class="section-rooms__card-heading">Эконом плюс</h3>
                             <p>Размеры (ШхГхВ) - 90х70х180 см</p>
                             <p>Площадь - 0,90 м2</p>
-                            
-                            <p>Оснащение номера</p>
-
+                            <div class="section-rooms__inventory-icon-wrap">
+                                <p>Оснащение номера <span class="section-rooms__icon section-rooms__icon--catbed"></span>
+                                <span class="section-rooms__icon section-rooms__icon--scratcher"></span>
+                                </p>
+                            </div>
                             <p>Цена за сутки: <span class="section-rooms_price-tag">200₽</span></p>
                             <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
                         </div>
@@ -138,9 +140,12 @@
                             <h3 class="section-rooms__card-heading">Комфорт</h3>
                             <p>Размеры (ШхГхВ) - 100х125х180 см</p>
                             <p>Площадь - 1,13 м2</p>
-                            
-                            <p>Оснащение номера</p>
-
+                            <div class="section-rooms__inventory-icon-wrap">
+                                <p>Оснащение номера <span class="section-rooms__icon section-rooms__icon--catbed"></span>
+                                <span class="section-rooms__icon section-rooms__icon--scratcher"></span>
+                                <span class="section-rooms__icon section-rooms__icon--cat-tree"></span>
+                                </p>
+                            </div>
                             <p>Цена за сутки: <span class="section-rooms_price-tag">250₽</span></p>
                             <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
                         </div>
@@ -152,9 +157,12 @@
                                 <h3 class="section-rooms__card-heading">Сьют</h3>
                                 <p>Размеры (ШхГхВ) - 125х125х180 см</p>
                                 <p>Площадь - 1,56 м2</p>
-                                
-                                <p>Оснащение номера</p>
-    
+                                <div class="section-rooms__inventory-icon-wrap">
+                                    <p>Оснащение номера <span class="section-rooms__icon section-rooms__icon--catbed"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--scratcher"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--cat-tree"></span>
+                                    </p>
+                                </div>
                                 <p>Цена за сутки: <span class="section-rooms_price-tag">350₽</span></p>
                                 <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
                             </div>
@@ -166,9 +174,13 @@
                                 <h3 class="section-rooms__card-heading">Люкс</h3>
                                 <p>Размеры (ШхГхВ) - 160х160х180 см</p>
                                 <p>Площадь - 2,56 м2</p>
-                                
-                                <p>Оснащение номера</p>
-    
+                                <div class="section-rooms__inventory-icon-wrap">
+                                    <p>Оснащение номера <span class="section-rooms__icon section-rooms__icon--catbed"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--scratcher"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--cat-tree"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--house"></span>
+                                    </p>
+                                </div>
                                 <p>Цена за сутки: <span class="section-rooms_price-tag">500₽</span></p>
                                 <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
                             </div>
@@ -179,9 +191,13 @@
                                 <h3 class="section-rooms__card-heading">Супер-Люкс</h3>
                                 <p>Размеры (ШхГхВ) - 180х160х180 см</p>
                                 <p>Площадь - 2,88 м2</p>
-                                
-                                <p>Оснащение номера</p>
-    
+                                <div class="section-rooms__inventory-icon-wrap">
+                                    <p>Оснащение номера <span class="section-rooms__icon section-rooms__icon--catbed"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--scratcher"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--cat-tree"></span>
+                                    <span class="section-rooms__icon section-rooms__icon--house"></span>
+                                    </p>
+                                </div>
                                 <p>Цена за сутки: <span class="section-rooms_price-tag">600₽</span></p>
                                 <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
                             </div>
@@ -190,5 +206,6 @@
             </div>
         </section>
     </main>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>

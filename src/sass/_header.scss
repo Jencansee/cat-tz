@@ -24,4 +24,15 @@
 .page-list__item--link {
     text-decoration: none;
     color: inherit;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+// sticky class for javascript 
+.page-header--sticky{
+    z-index: 10000;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
