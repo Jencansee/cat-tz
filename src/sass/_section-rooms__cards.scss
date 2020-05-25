@@ -1,0 +1,36 @@
+.section-rooms__card{
+    border: 1px solid $gray;
+    border-radius: 0.6rem;
+    margin:0 2rem;
+}
+.section-rooms__card-text-wrap{
+    padding: 1.5rem 0rem 2rem 2rem;
+}
+.section-rooms__card-text-wrap > p {
+    margin-top: 1rem;
+}
+.section-rooms__card-heading{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.section-rooms_price-tag{
+    font-size: 1.8rem;
+    margin-left: 0.8rem;
+}
+.section-rooms__btn--booking{
+    padding: 1.4rem 8rem 1.4rem 6rem;
+    margin-top: 2rem;
+    background-color: $orange;
+    color: white;
+    position: relative;
+    &::after{
+        content: "";
+        background: url(../../src/img/svg/section-rooms__btn--booking-paw.svg) no-repeat;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        width: 3.4rem;
+        height: 3.4rem;
+        transform: translateY(-50%);
+    }
+}

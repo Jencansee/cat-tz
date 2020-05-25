@@ -1,0 +1,27 @@
+.page-header{
+    max-width: 1922px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.main-nav{
+    flex-basis: 40%;
+}
+.main-nav__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .page-list__item {
+        font-size: 1.6rem;
+        list-style: none;
+    }
+}
+
+.page-list__item--link {
+    text-decoration: none;
+    color: inherit;
+}

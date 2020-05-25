@@ -1,0 +1,186 @@
+@charset "UTF-8";
+:root {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 62.5%; }
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+body {
+  color: #1A212F; }
+  body p {
+    font-size: 1.4rem; }
+
+.page-header {
+  max-width: 1922px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 0;
+  margin: 0 auto;
+  width: 80%; }
+
+.main-nav {
+  flex-basis: 40%; }
+
+.main-nav__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .main-nav__list .page-list__item {
+    font-size: 1.6rem;
+    list-style: none; }
+
+.page-list__item--link {
+  text-decoration: none;
+  color: inherit; }
+
+.section-rooms {
+  margin-top: 6rem; }
+
+.section-rooms__head-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 7rem; }
+
+.section-rooms__head {
+  font-size: 3.6rem;
+  color: #151B28; }
+
+.section-rooms__sorting {
+  padding: 0.1rem 5rem;
+  font-size: 1.4rem; }
+
+.section-rooms__wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto; }
+
+.section-rooms__cards {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-left: 6rem; }
+
+.section-rooms__filters {
+  min-width: 15%; }
+
+.section-rooms__price-input {
+  padding: 0.4rem;
+  margin-right: 1rem; }
+
+.section-rooms__price-text, .section-rooms__area-text, .section-rooms__inventory-text {
+  margin: 3rem 0 2rem 0;
+  font-size: 1.6rem; }
+
+.section-rooms__inventory-text {
+  margin-top: 2rem; }
+
+/*                                  */
+/*          checkbox styles         */
+/*                                  */
+.section-rooms__check-wrap {
+  display: flex;
+  flex-direction: column; }
+
+.section-rooms__check {
+  font-size: 1.4rem;
+  padding-bottom: 1.5rem;
+  padding-left: 3.2rem; }
+
+.section-rooms__check-input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; }
+
+.section-rooms__check-box {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -0.2rem;
+  margin-left: -3.2rem;
+  box-shadow: 0 0 0 0.2rem #E1E1E1;
+  background-color: white; }
+
+.section-rooms__check-input:checked + .section-rooms__check-box {
+  background: url("../../src/img/svg/checkmark.svg") no-repeat;
+  background-size: 1.4rem;
+  background-position: center; }
+
+.section-rooms__check-input:focus + .section-rooms__check-box {
+  box-shadow: 0 0 0 0.2rem #E1E1E1, 0 0 0 0.4rem #FAC663; }
+
+/* looks good with normal-sized mark both windows and macos, but bolder one in macos for some reason have slope to the side (pretty sure, apple had to do with that)
+.section-rooms__check-input:checked + .section-rooms__check-box::before{
+    content: "✓"; //this is normal-sized mark
+    content: "✔"; //this is bold mark
+    font-size: 2rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+/*                          */
+/*            BUTTONS       */
+/*                          */
+.section-rooms__btn-wrap {
+  display: flex;
+  flex-direction: column; }
+
+.section-rooms__btn {
+  padding: 1.2rem 4rem;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  transition: all ease-in-out 0.2s; }
+  .section-rooms__btn:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+.section-rooms__btn--filters {
+  border: 0.2rem solid #FAC663; }
+
+.section-rooms__btn--accept {
+  background-color: #FAC663; }
+
+.section-rooms__card {
+  border: 1px solid #E1E1E1;
+  border-radius: 0.6rem;
+  margin: 0 2rem; }
+
+.section-rooms__card-text-wrap {
+  padding: 1.5rem 0rem 2rem 2rem; }
+
+.section-rooms__card-text-wrap > p {
+  margin-top: 1rem; }
+
+.section-rooms__card-heading {
+  font-size: 2rem;
+  font-weight: bold; }
+
+.section-rooms_price-tag {
+  font-size: 1.8rem;
+  margin-left: 0.8rem; }
+
+.section-rooms__btn--booking {
+  padding: 1.4rem 8rem 1.4rem 6rem;
+  margin-top: 2rem;
+  background-color: #FF7236;
+  color: white;
+  position: relative; }
+  .section-rooms__btn--booking::after {
+    content: "";
+    background: url(../../src/img/svg/section-rooms__btn--booking-paw.svg) no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    width: 3.4rem;
+    height: 3.4rem;
+    transform: translateY(-50%); }

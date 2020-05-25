@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="dist/styles/style.css">
+    <link rel="shortcut icon" href="./src/img/svg/koteika-icon.svg" type="image/svg">
+    <title>Котейка</title>
+</head>
+<body>
+    <header class="page-header">
+        <a class="page-header__logo" href="">
+            <img class="page-header__logo-image" src="./src/img/svg/page-header__logo-image.svg" alt="Котейка">
+        </a>
+        <nav class="main-nav">
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list page-list">
+                    <li class="page-list__item"><a class="page-list__item--link" href="#">Почему мы?</a></li>
+                    <li class="page-list__item"><a class="page-list__item--link" href="#">Номера</a></li>
+                    <li class="page-list__item"><a class="page-list__item--link" href="#">Отзывы</a></li>
+                    <li class="page-list__item"><a class="page-list__item--link" href="#">Как нас найти</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="page-main">
+        <section class="section-rooms">
+            <div class="section-rooms__head-wrap">
+            <h1 class="section-rooms__head">Наши номера</h1>
+            <select class="section-rooms__sorting" id="section-rooms_sort">
+                <option value="area-up" selected>По площади</option>
+                <option value="area-down">По площади</option>
+                <option value="price-up">По цене</option>
+                <option value="price-down">По цене</option>
+              </select>
+            </div>
+            <div class="section-rooms__wrapper">
+                <div class="section-rooms__filters">
+                    <label class="section-rooms__price-range"> 
+                        <p class="section-rooms__price-text">Цена за сутки, ₽</p>
+                        <input class="section-rooms__price-input" size="10" type="text" placeholder="от 100">
+                        <input class="section-rooms__price-input" size="10" type="text" placeholder="до 600">
+                    </label>
+                    <div class="section-rooms__area">
+                       <p class="section-rooms__area-text">Площадь</p>
+                        <div class="section-rooms__check-wrap">
+                        <label class="section-rooms__check" for="check-input__eco">
+                            <input class="section-rooms__check-input" type="checkbox" name="check-input__eco" id="check-input__eco">
+                            <span class="section-rooms__check-box"></span>0,63 м2
+                        </label>
+                        <label class="section-rooms__check" for="check-input__eco-plus">
+                            <input class="section-rooms__check-input" type="checkbox" name="check-input__eco-plus" id="check-input__eco-plus">
+                            <span class="section-rooms__check-box"></span>0,90 м2
+                        </label>
+                        <label class="section-rooms__check" for="check-input__comfort">
+                            <input class="section-rooms__check-input" type="checkbox" name="check-input__comfort" id="check-input__comfort">
+                            <span class="section-rooms__check-box"></span>1,13 м2
+                        </label>
+                        <label class="section-rooms__check" for="check-input__suite">
+                            <input class="section-rooms__check-input" type="checkbox" name="check-input__suite" id="check-input__suite">
+                            <span class="section-rooms__check-box"></span>1,56 м2
+                        </label>
+                        <label class="section-rooms__check" for="check-input__luxe">
+                            <input class="section-rooms__check-input" type="checkbox" name="check-input__luxe" id="check-input__luxe">
+                            <span class="section-rooms__check-box"></span>2,56 м2
+                        </label>
+                        <label class="section-rooms__check" for="check-input__luxe-super">
+                            <input class="section-rooms__check-input" type="checkbox" name="check-input__luxe-super" id="check-input__luxe-super">
+                            <span class="section-rooms__check-box"></span>2,88 м2
+                        </label>
+                        </div>
+                    </div>
+
+                    <div class="section-rooms__inventory">
+                        <p class="section-rooms__inventory-text">Оснащение номера</p>
+                         <div class="section-rooms__check-wrap">
+                            <label class="section-rooms__check" for="check-input__empty">
+                                <input class="section-rooms__check-input" type="checkbox" name="check-input__empty" id="check-input__empty">
+                                <span class="section-rooms__check-box"></span>Пустой номер
+                            </label>
+                            <label class="section-rooms__check" for="check-input__catbed">
+                                <input class="section-rooms__check-input" type="checkbox" name="check-input__catbed" id="check-input__catbed">
+                                <span class="section-rooms__check-box"></span>Лежак
+                            </label>
+                            <label class="section-rooms__check" for="check-input__scratcher">
+                                <input class="section-rooms__check-input" type="checkbox" name="check-input__scratcher" id="check-input__scratcher">
+                                <span class="section-rooms__check-box"></span>Когтеточка
+                            </label>
+                            <label class="section-rooms__check" for="check-input__cat-tree">
+                             <input class="section-rooms__check-input" type="checkbox" name="check-input__cat-tree" id="check-input__cat-tree">
+                             <span class="section-rooms__check-box"></span>Игровой-комплекс
+                            </label>
+                            <label class="section-rooms__check" for="check-input__house">
+                                <input class="section-rooms__check-input" type="checkbox" name="check-input__house" id="check-input__house">
+                                <span class="section-rooms__check-box"></span>Домик
+                            </label>
+                         </div>
+                     </div>
+
+                     <div class="section-rooms__btn-wrap">
+                        <button class="section-rooms__btn section-rooms__btn--accept">Применить</button>
+                        <button class="section-rooms__btn section-rooms__btn--filters ">Сбросить фильтр</button>
+                     </div>
+                </div>
+                <div class="section-rooms__cards">
+                    <div class="section-rooms__card">
+                        <img src="./src/img/png/section-rooms__cards/eco-img.png" alt="Эконом-номер">
+                        <div class="section-rooms__card-text-wrap">
+                            <h3 class="section-rooms__card-heading">Эконом</h3>
+                            <p>Размеры (ШхГхВ) - 90х70х180 см</p>
+                            <p>Площадь - 0,63 м2</p>
+                            
+                            <p>Оснащение номера</p>
+
+                            <p>Цена за сутки: <span class="section-rooms_price-tag">100₽</span></p>
+                            <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
+                        </div>
+                    </div>
+
+                    <div class="section-rooms__card">
+                        <img src="./src/img/png/section-rooms__cards/eco-plus-img.png" alt="Эконом-плюс номер">
+                        <div class="section-rooms__card-text-wrap">
+                            <h3 class="section-rooms__card-heading">Эконом плюс</h3>
+                            <p>Размеры (ШхГхВ) - 90х70х180 см</p>
+                            <p>Площадь - 0,90 м2</p>
+                            
+                            <p>Оснащение номера</p>
+
+                            <p>Цена за сутки: <span class="section-rooms_price-tag">200₽</span></p>
+                            <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
+                        </div>
+                    </div>
+
+                    <div class="section-rooms__card">
+                        <img src="./src/img/png/section-rooms__cards/comfort-img.png" alt="Комфорт номер">
+                        <div class="section-rooms__card-text-wrap">
+                            <h3 class="section-rooms__card-heading">Комфорт</h3>
+                            <p>Размеры (ШхГхВ) - 100х125х180 см</p>
+                            <p>Площадь - 1,13 м2</p>
+                            
+                            <p>Оснащение номера</p>
+
+                            <p>Цена за сутки: <span class="section-rooms_price-tag">250₽</span></p>
+                            <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
+                        </div>
+                    </div>
+
+                        <div class="section-rooms__card">
+                            <img src="./src/img/png/section-rooms__cards/suite-img.png" alt="Сьют номер">
+                            <div class="section-rooms__card-text-wrap">
+                                <h3 class="section-rooms__card-heading">Сьют</h3>
+                                <p>Размеры (ШхГхВ) - 125х125х180 см</p>
+                                <p>Площадь - 1,56 м2</p>
+                                
+                                <p>Оснащение номера</p>
+    
+                                <p>Цена за сутки: <span class="section-rooms_price-tag">350₽</span></p>
+                                <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
+                            </div>
+                        </div>
+
+                        <div class="section-rooms__card">
+                            <img src="./src/img/png/section-rooms__cards/luxe-img.png" alt="Люкс номер">
+                            <div class="section-rooms__card-text-wrap">
+                                <h3 class="section-rooms__card-heading">Люкс</h3>
+                                <p>Размеры (ШхГхВ) - 160х160х180 см</p>
+                                <p>Площадь - 2,56 м2</p>
+                                
+                                <p>Оснащение номера</p>
+    
+                                <p>Цена за сутки: <span class="section-rooms_price-tag">500₽</span></p>
+                                <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
+                            </div>
+                        </div>
+                        <div class="section-rooms__card">
+                            <img src="./src/img/png/section-rooms__cards/luxe-super-img.png" alt="Супер-Люкс номер">
+                            <div class="section-rooms__card-text-wrap">
+                                <h3 class="section-rooms__card-heading">Супер-Люкс</h3>
+                                <p>Размеры (ШхГхВ) - 180х160х180 см</p>
+                                <p>Площадь - 2,88 м2</p>
+                                
+                                <p>Оснащение номера</p>
+    
+                                <p>Цена за сутки: <span class="section-rooms_price-tag">600₽</span></p>
+                                <button class="section-rooms__btn section-rooms__btn--booking">Забронировать</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
