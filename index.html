@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="https://github.com/Jencansee">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="dist/styles/style.css">
     <link rel="shortcut icon" href="./src/img/svg/koteika-icon.svg" type="image/svg">
@@ -28,12 +29,22 @@
         <section class="section-rooms">
             <div class="section-rooms__head-wrap">
             <h1 class="section-rooms__head">Наши номера</h1>
-            <select class="section-rooms__sorting" id="section-rooms_sort">
-                <option value="area-up" selected> 🠕 По площади</option>
-                <option value="area-down"> 🠗 По площади</option>
-                <option value="price-up"> 🠕 По цене</option>
-                <option value="price-down"> 🠗 По цене</option>
-              </select>
+            <div class="section-rooms__select-wrapper">
+               <div class="section-rooms__select-visual">
+                   <div class="select-visual__header">
+                        <span class="select-visual__current"><img class="select-visial__item--arrows" src="./src/img/svg/select-visial/select-visial__item--arrow-up.svg" alt="">По площади</span>
+                        <div class="select-visual__icon">
+                            <img class="select-visual__current--pointer" src="./src/img/svg/select-visial/select-visual__icon-img.svg" alt="">
+                        </div>
+                   </div>
+                   <div class="select-visual__body">
+                       <div class="select-visial__item"><img class="select-visial__item--arrows" src="./src/img/svg/select-visial/select-visial__item--arrow-up.svg" alt="">По площади</div>
+                       <div class="select-visial__item"><img class="select-visial__item--arrows" src="./src/img/svg/select-visial/select-visial__item--arrow-down.svg" alt="">По площади</div>
+                       <div class="select-visial__item"><img class="select-visial__item--arrows" src="./src/img/svg/select-visial/select-visial__item--arrow-up.svg" alt="">По цене</div>
+                       <div class="select-visial__item"><img class="select-visial__item--arrows" src="./src/img/svg/select-visial/select-visial__item--arrow-down.svg" alt="">По цене</div>
+                   </div>
+               </div>
+            </div>
             </div>
             <div class="section-rooms__wrapper">
                 <div class="section-rooms__filters">

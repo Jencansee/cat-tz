@@ -1,0 +1,57 @@
+.section-rooms__select-visual{
+  width: 18rem;
+  position: relative;
+  font-size: 1.4rem;
+}
+.section-rooms__select-visual.show-sorting .select-visual__body {
+  display: block;
+}
+.section-rooms__select-visual.show-sorting .select-visual__current--pointer{
+  transition: all ease 0.4s;
+  transform: rotateX(180deg);
+}
+
+.select-visual__header{
+  display: flex;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.select-visual__current{
+  padding: 1.4rem;
+}
+.select-visual__icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  margin-left: auto;
+}
+.select-visial__item--arrows{
+  margin-right: 0.8rem;
+}
+
+.select-visual__body{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border: 0.1rem solid #ccc;
+  border-top: 0;
+  display: none;
+}
+
+.select-visial__item{
+  background: white;
+  line-height: 2.4rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  &:hover{
+    background: darken($color: white, $amount: 4);
+  }
+}

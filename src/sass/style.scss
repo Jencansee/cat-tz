@@ -16,7 +16,7 @@ $fontColor: #1A212F;
 $headerColor: #151B28;
 $gray: #E1E1E1;
 
-body{
+body {
     color: $fontColor;
     p {
         font-size: 1.4rem;
@@ -26,4 +26,5 @@ body{
 @import 'header';
 @import 'section-rooms';
 @import 'section-rooms__cards';
+@import 'section-rooms__options';
 @import 'adaptive';
